@@ -19,13 +19,13 @@ class Category extends Model
     }
 
     private static function saveImage($request){
-      self::$image = $request->file('image');
-      self::$imageNewName=$request->category_name.'-'.rand().'.'.self::$image->Extension();
-      self::$directory='admin-asset/upload-image/category/';
-      self::$imgUrl=self::$directory.self::$imageNewName;
-      self::$image->move(self::$directory,self::$imageNewName);
-      return  self::$imgUrl;
-    }
+    self::$image = $request->file('image');
+    self::$imageNewName=$request->category_name.'-'.rand().'.'.self::$image->getClientOriginalExtension();
+    self::$directory='admin-asset/upload-image/category/';
+    self::$imgUrl=self::$directory.self::$imageNewName;
+    self::$image->move(self::$directory,self::$imageNewName);
+    return  self::$imgUrl;
+}
 
     public static function updateStatus($id){
         self::$category=Category::find($id);

@@ -30,6 +30,7 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+//        return $request->file();
         Category::saveCategory($request);
         return back();
     }
@@ -48,7 +49,7 @@ class CategoryController extends Controller
      */
     public function edit(string $id)
     {
-        return view('admin.category.edit-category',[
+        return view('admin.category.category',[
             'category'=>Category::find($id)
         ]);
     }
@@ -58,6 +59,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
+//        return $request->file();
         Category::UpdateCategory($request,$id);
         return back();
     }
@@ -69,8 +71,5 @@ class CategoryController extends Controller
     {
        Category::deleteCategory($id);
        return back();
-    }
-    public function dis(){
-        return 'ok';
     }
 }

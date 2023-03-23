@@ -74,6 +74,7 @@
 <script src="{{ asset('admin-asset') }}/assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
 <script src="{{ asset('admin-asset') }}/assets/plugins/apexcharts-bundle/js/apexcharts.min.js"></script>
 <!--app-->
+
 <script src="{{ asset('admin-asset') }}/assets/js/app.js"></script>
 <script src="{{ asset('admin-asset') }}/assets/js/index.js"></script>
 

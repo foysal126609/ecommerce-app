@@ -33,6 +33,7 @@
                                     <input type="file" name="image" class="form-control">
                                     <img src="{{ asset($category->image) }}" class="img-fluid" style="height: 50px; height: 50px" alt="">
                                 </div>
+
                                 <div class="col-12">
                                     <label class="form-label">Status</label>
                                     <input type="radio" name="status" value= "1"  {{$category->status ==1 ? 'checked' :''  }}>Published
@@ -44,6 +45,7 @@
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </div>
                                 </div>
+
                             </form>
                         </div>
                     </div>
